@@ -527,7 +527,7 @@ class RomaniaTestData(models.Model):
         acc_group = self.env.ref("account.group_account_user")
         users = self.env["res.users"].search([])
         for user in users:
-            if acc_group and not user.has_groups("account.group_account_user"):
+            if acc_group and not user.has_group("account.group_account_user"):
                 user.write({"groups_id": [(4, acc_group.id)]})
         partners = self.env["res.partner"].search([])
         if len(partners) < 50:
