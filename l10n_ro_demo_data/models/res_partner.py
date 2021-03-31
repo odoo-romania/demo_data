@@ -8,6 +8,27 @@ from odoo import models
 class ResCompany(models.Model):
     _inherit = "res.partner"
 
+    def _map_anaf_country_code(self, country_code):
+        country_code_map = {
+            "RE": "FR",
+            "GP": "FR",
+            "MQ": "FR",
+            "GF": "FR",
+            "EL": "GR",
+        }
+        return country_code_map.get(country_code, country_code)
+
+    def _get_anaf_europe_codes(self):
+        europe_codes = []
+        europe_group = self.env.ref("base.europe", raise_if_not_found=False)
+        if not europe_group:
+            europe_group = self.env["res.country.group"].search(
+                [("name", "=", "Europe")], limit=1
+            )
+        if europe_group:
+            europe_codes = europe_group.country_ids.mapped("code") + ["XI"]
+        return europe_codes
+
     def _parse_anaf_vat_info(self):
         """Return tuple with split info (country_code, identifier_type and
         vat_number) from vat and country partner
