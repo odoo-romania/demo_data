@@ -20,6 +20,7 @@
     ],
     "external_dependencies": {"python3": ["faker", "faker-commerce"]},
     "data": [
+        "security/ir.model.access.csv",
         "views/res_company_views.xml",
         "data/res_partner.xml",
         "data/product_category.xml",
