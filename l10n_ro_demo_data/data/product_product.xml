@@ -21721,8 +21721,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code" />
         <field name="list_price">430</field>
         <field
@@ -21748,8 +21748,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code" />
         <field name="list_price">430</field>
         <field
@@ -21775,8 +21775,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code" />
         <field name="list_price">430</field>
         <field
@@ -21802,8 +21802,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code" />
         <field name="list_price">430</field>
         <field
@@ -21829,8 +21829,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code" />
         <field name="list_price">430</field>
         <field
@@ -21856,8 +21856,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code" />
         <field name="list_price">430</field>
         <field
@@ -21883,8 +21883,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code" />
         <field name="list_price">430</field>
         <field
@@ -21910,8 +21910,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code" />
         <field name="list_price">430</field>
         <field
@@ -21937,8 +21937,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code" />
         <field name="list_price">430</field>
         <field
@@ -21964,8 +21964,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code" />
         <field name="list_price">430</field>
         <field
@@ -21991,8 +21991,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code" />
         <field name="list_price">430</field>
         <field
@@ -22018,8 +22018,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code" />
         <field name="list_price">430</field>
         <field
@@ -22045,8 +22045,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code" />
         <field name="list_price">430</field>
         <field
@@ -22072,8 +22072,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code" />
         <field name="list_price">430</field>
         <field
@@ -22099,8 +22099,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code" />
         <field name="list_price">430</field>
         <field
@@ -22126,8 +22126,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code" />
         <field name="list_price">430</field>
         <field
@@ -22153,8 +22153,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code" />
         <field name="list_price">430</field>
         <field
@@ -22180,8 +22180,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code" />
         <field name="list_price">430</field>
         <field
@@ -22207,8 +22207,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code" />
         <field name="list_price">430</field>
         <field
@@ -22234,8 +22234,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code" />
         <field name="list_price">430</field>
         <field
@@ -22261,8 +22261,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code" />
         <field name="list_price">430</field>
         <field
@@ -22288,8 +22288,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code" />
         <field name="list_price">430</field>
         <field
@@ -22315,8 +22315,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code" />
         <field name="list_price">430</field>
         <field
@@ -54982,8 +54982,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code">ST_6071</field>
         <field name="barcode">3300000104555</field>
         <field name="list_price">350.00</field>
@@ -55010,8 +55010,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code">ST_6023</field>
         <field name="barcode">3300000013555</field>
         <field name="list_price">330.00</field>
@@ -55038,8 +55038,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code">ST_6035</field>
         <field name="barcode">3300000014555</field>
         <field name="list_price">350.00</field>
@@ -55066,8 +55066,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code">ST_3059</field>
         <field name="barcode">5300000030591</field>
         <field name="list_price">3.50</field>
@@ -55096,8 +55096,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code">ST_346424</field>
         <field name="barcode">5300003464249</field>
         <field name="list_price">7.00</field>
@@ -55124,8 +55124,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code">ST_28506</field>
         <field name="barcode">5300000285069</field>
         <field name="list_price">3.30</field>
@@ -55152,8 +55152,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code">ST_28507</field>
         <field name="barcode">5300000285076</field>
         <field name="list_price">4.50</field>
@@ -55180,8 +55180,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code">ST_289154</field>
         <field name="barcode">5300002891541</field>
         <field name="list_price">5.00</field>
@@ -55210,8 +55210,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code">ST_346564</field>
         <field name="barcode">5300003465642</field>
         <field name="list_price">5.50</field>
@@ -55348,8 +55348,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code">ST_1945</field>
         <field name="barcode">4480</field>
         <field name="list_price">10.50</field>
@@ -55376,8 +55376,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code">ST_2453</field>
         <field name="list_price">7.50</field>
         <field
@@ -55405,8 +55405,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code">ST_2153</field>
         <field name="barcode">4854</field>
         <field name="list_price">7.00</field>
@@ -55433,8 +55433,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code">ST_28179</field>
         <field name="barcode">28179</field>
         <field name="list_price">6.00</field>
@@ -55461,8 +55461,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code">ST_2116</field>
         <field name="barcode">479</field>
         <field name="list_price">2.30</field>
@@ -55489,8 +55489,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code">ST_28496</field>
         <field name="barcode">28496</field>
         <field name="list_price">1.70</field>
@@ -55517,8 +55517,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code">ST_539</field>
         <field name="barcode">1916</field>
         <field name="list_price">1.30</field>
@@ -55545,8 +55545,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code">ST_402</field>
         <field name="barcode">402</field>
         <field name="list_price">1.80</field>
@@ -55573,8 +55573,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code">ST_1793</field>
         <field name="barcode">4144</field>
         <field name="list_price">1.59</field>
@@ -55601,8 +55601,8 @@
             model="product.category"
         />
         <field name="type">product</field>
-        <field name="uom_id" ref="uom.product_uom_cubic_meter" />
-        <field name="uom_po_id" ref="uom.product_uom_cubic_meter" />
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
         <field name="default_code">ST_2447</field>
         <field name="barcode">534</field>
         <field name="list_price">7.56</field>
