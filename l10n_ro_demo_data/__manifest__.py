@@ -17,6 +17,7 @@
         "l10n_ro_partner_unique",
         "l10n_ro_stock_account",
         "sale_management",
+        "sale_purchase",
     ],
     "external_dependencies": {"python3": ["faker", "faker-commerce"]},
     "data": [
