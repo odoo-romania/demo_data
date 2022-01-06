@@ -19,15 +19,12 @@ except (ImportError, IOError) as err:
 
 
 def days_last_month():
-    last_month = date.today().replace(day=1) - timedelta(1)
-    m = last_month.month
-    y = last_month.year
-    ndays = (date(y, m + 1, 1) - date(y, m, 1)).days
-    d1 = date(y, m, 1)
-    d2 = date(y, m, ndays)
-    delta = d2 - d1
+    current_first_date = date.today().replace(day=1)
+    last_first_month = (date.today().replace(day=1) - timedelta(1)).replace(day=1)
+    ndays = (current_first_date - last_first_month).days
     return [
-        (d1 + timedelta(days=i)).strftime("%Y-%m-%d") for i in range(delta.days + 1)
+        (last_first_month + timedelta(days=i)).strftime("%Y-%m-%d")
+        for i in range(ndays)
     ]
 
 
