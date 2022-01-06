@@ -6,9 +6,7 @@ import logging
 import random
 from datetime import date, timedelta
 
-from dateutil.relativedelta import relativedelta
-
-from odoo import api, models
+from odoo import _, api, models
 from odoo.exceptions import ValidationError
 
 _logger = logging.getLogger(__name__)
@@ -21,9 +19,7 @@ except (ImportError, IOError) as err:
 
 
 def days_last_month():
-    last_month = date.today() + relativedelta(
-        months=-1, day=1, hour=0, minute=0, second=0, microsecond=0
-    )
+    last_month = date.today().replace(day=1) - timedelta(1)
     m = last_month.month
     y = last_month.year
     ndays = (date(y, m + 1, 1) - date(y, m, 1)).days
@@ -150,7 +146,10 @@ class RomaniaTestData(models.Model):
                     partner.write({"vat": vat_number})
                     vat_generated = True
                 except ValidationError:
-                    pass
+                    name = _(
+                        "Cannot write partner VAT number %(partnername)s - %(vat)s'"
+                    ) % {"partnername": partner.name, "vat": vat_number}
+                    _logger.info(name)
 
         return partner
 
@@ -171,7 +170,10 @@ class RomaniaTestData(models.Model):
                     partner.write({"vat": vat_number})
                     vat_generated = True
                 except ValidationError:
-                    pass
+                    name = _(
+                        "Cannot write partner VAT number %(partnername)s - %(vat)s'"
+                    ) % {"partnername": partner.name, "vat": vat_number}
+                    _logger.info(name)
 
     @api.model
     def create_test_record_partner_contact(self, partner, contact_type, country_code):
