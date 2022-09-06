@@ -1,2 +1,2 @@
 # demo-data
-Odoo Demo data for Romanian Localization
+Odoo Demo Data for Romanian Localization
