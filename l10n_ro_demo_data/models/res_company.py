@@ -104,14 +104,8 @@ class ResCompany(models.Model):
                     "l10n_ro_property_trade_discount_received_account_id": acc_obj.search(
                         [("code", "=", "609000"), ("company_id", "=", company.id)]
                     ),
-                    "property_trade_discount_granted_account_id": acc_obj.search(
+                    "l10n_ro_property_trade_discount_granted_account_id": acc_obj.search(
                         [("code", "=", "709000"), ("company_id", "=", company.id)]
-                    ),
-                    "l10n_ro_property_trade_discount_granted_account_id": afp_obj.search(
-                        [
-                            ("name", "=", "Regim TVA la Incasare"),
-                            ("company_id", "=", company.id),
-                        ]
                     ),
                     "l10n_ro_property_vat_on_payment_position_id": afp_obj.search(
                         [
