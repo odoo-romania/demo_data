@@ -1,4 +1,4 @@
-id,name,parent_id,is_company,vat,street,city,zip,state_id,country_id,email,phone,vat_subjected,customer_rank,supplier_rank
+id,name,parent_id,is_company,vat,street,city,zip,state_id,country_id,email,phone,l10n_ro_vat_subjected,customer_rank,supplier_rank
 nexterp_demo_partner_1,Aanei Stancu SPI,,1,RO7323927491,Intrarea Nistor Nr. 73,Motru,236885,base.RO_BV,base.ro,stanachim@post.ro,0246 747 933,0,0,0
 nexterp_demo_partner_2,Brândușa Cristea,nexterp_demo_partner_1,0,,Soseaua Achim Dumitrescu,Bals,842537,base.RO_AB,base.ro,renatapop@post.ro,,0,0,0
 nexterp_demo_partner_3,Fiona Dobre,nexterp_demo_partner_1,0,,Strada Casiana Ababei Nr. 31 Bl. 82  Sc. 37 Ap. 826,Arad,660870,base.RO_CV,base.ro,odinu@zzup.ro,,0,0,0

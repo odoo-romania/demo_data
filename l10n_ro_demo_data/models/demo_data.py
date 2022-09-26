@@ -111,7 +111,7 @@ class RomaniaTestData(models.Model):
             )
             if states:
                 state = random.choice(states).id
-        vat_subjected = random.choice([True, False])
+        l10n_ro_vat_subjected = random.choice([True, False])
         vals = {
             "name": fake_data.company(),
             "email": fake_data.email(),
@@ -122,7 +122,7 @@ class RomaniaTestData(models.Model):
             "state_id": state,
             "country_id": country,
             "phone": fake_data.phone_number(),
-            "vat_subjected": vat_subjected,
+            "l10n_ro_l10n_ro_vat_subjected": l10n_ro_vat_subjected,
             "customer_rank": int(fake_data.boolean()),
             "supplier_rank": int(fake_data.boolean()),
         }
@@ -438,7 +438,7 @@ class RomaniaTestData(models.Model):
                 purchase.fiscal_position_id = fp[0]
             fiz_person = (
                 purchase.partner_id.country_id.id == self.env.ref("base.ro").id
-                and not purchase.partner_id.vat_subjected
+                and not purchase.partner_id.l10n_ro_vat_subjected
             )
             if fp_name == "Regim National" or fiz_person:
                 for line in purchase.order_line:

@@ -74,8 +74,8 @@ class ResCompany(models.Model):
                 {
                     # "caen_code": "6202",
                     "anglo_saxon_accounting": True,
-                    "romanian_accounting": True,
-                    "stock_acc_price_diff": True,
+                    "l10n_ro_accounting": True,
+                    "l10n_ro_stock_acc_price_diff": True,
                     "company_registry": "J35/1254/2018",
                     "phone": "0770816455",
                     "email": "contact@nexterp.ro",
@@ -86,34 +86,40 @@ class ResCompany(models.Model):
                     # "account_serv_purchase_tax_id": purch_serv_tax
                     # if purch_serv_tax
                     # else False,
-                    "property_stock_picking_payable_account_id": acc_obj.search(
+                    "l10n_ro_property_stock_picking_payable_account_id": acc_obj.search(
                         [("code", "=", "408000"), ("company_id", "=", company.id)]
                     ),
-                    "property_stock_picking_receivable_account_id": acc_obj.search(
+                    "l10n_ro_property_stock_picking_receivable_account_id": acc_obj.search(
                         [("code", "=", "418000"), ("company_id", "=", company.id)]
                     ),
-                    "property_stock_usage_giving_account_id": acc_obj.search(
+                    "l10n_ro_property_stock_usage_giving_account_id": acc_obj.search(
                         [("code", "=", "803500"), ("company_id", "=", company.id)]
                     ),
-                    "property_stock_picking_custody_account_id": acc_obj.search(
+                    "l10n_ro_property_stock_picking_custody_account_id": acc_obj.search(
                         [("code", "=", "803300"), ("company_id", "=", company.id)]
                     ),
-                    "property_uneligible_tax_account_id": acc_obj.search(
+                    "l10n_ro_property_uneligible_tax_account_id": acc_obj.search(
                         [("code", "=", "442820"), ("company_id", "=", company.id)]
                     ),
-                    "property_trade_discount_received_account_id": acc_obj.search(
+                    "l10n_ro_property_trade_discount_received_account_id": acc_obj.search(
                         [("code", "=", "609000"), ("company_id", "=", company.id)]
                     ),
                     "property_trade_discount_granted_account_id": acc_obj.search(
                         [("code", "=", "709000"), ("company_id", "=", company.id)]
                     ),
-                    "property_vat_on_payment_position_id": afp_obj.search(
+                    "l10n_ro_property_trade_discount_granted_account_id": afp_obj.search(
                         [
                             ("name", "=", "Regim TVA la Incasare"),
                             ("company_id", "=", company.id),
                         ]
                     ),
-                    "property_inverse_taxation_position_id": afp_obj.search(
+                    "l10n_ro_property_vat_on_payment_position_id": afp_obj.search(
+                        [
+                            ("name", "=", "Regim TVA la Incasare"),
+                            ("company_id", "=", company.id),
+                        ]
+                    ),
+                    "l10n_ro_property_inverse_taxation_position_id": afp_obj.search(
                         [
                             ("name", "=", "Regim Taxare Inversa"),
                             ("company_id", "=", company.id),

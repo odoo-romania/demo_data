@@ -51,7 +51,7 @@ for line in lines:
         <field name="country_id" ref="%s"/>
         <field name="email">%s</field>
         <field name="phone">%s</field>
-        <field name="vat_subjected">%s</field>
+        <field name="l10n_ro_vat_subjected">%s</field>
         <field name="customer_rank">%s</field>
         <field name="supplier_rank">%s</field>
     </record> """ % (
