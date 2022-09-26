@@ -524,8 +524,10 @@ class RomaniaTestData(models.Model):
         countries_exp = ["TR", "RU", "TH"]
         country_ro = "RO"
         acc_group = self.env.ref("account.group_account_user")
-        users = self.env["res.users"].search([])
-        for user in users:
+        all_users = self.env["res.users"].search([])
+        portal_users = all_users.filtered("share")
+        internal_users = all_users - portal_users
+        for user in internal_users:
             if acc_group and not user.has_group("account.group_account_user"):
                 user.write({"groups_id": [(4, acc_group.id)]})
         partners = self.env["res.partner"].search([])
