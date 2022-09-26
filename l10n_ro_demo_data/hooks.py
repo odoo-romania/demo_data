@@ -9,8 +9,8 @@ def pre_init_hook(cr):
         """
     UPDATE res_company
     SET anglo_saxon_accounting=True,
-        romanian_accounting=True,
-        stock_acc_price_diff=True
+        l10n_ro_accounting=True,
+        l10n_ro_stock_acc_price_diff=True
     """
     )
 
