@@ -11,7 +11,7 @@
     "summary": """Create demo data for Romanian Localisation""",
     "depends": [
         "l10n_ro_account_anaf_sync",
-        #"l10n_ro_account_bank_statement_report",
+        # "l10n_ro_account_bank_statement_report",
         "l10n_ro_account_edit_currency_rate",
         "l10n_ro_account_period_close",
         "l10n_ro_city",
