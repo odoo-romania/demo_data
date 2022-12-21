@@ -122,7 +122,7 @@ class RomaniaTestData(models.Model):
             "state_id": state,
             "country_id": country,
             "phone": fake_data.phone_number(),
-            "l10n_ro_l10n_ro_vat_subjected": l10n_ro_vat_subjected,
+            "l10n_ro_vat_subjected": l10n_ro_vat_subjected,
             "customer_rank": int(fake_data.boolean()),
             "supplier_rank": int(fake_data.boolean()),
         }
@@ -449,7 +449,7 @@ class RomaniaTestData(models.Model):
                 picking = pickings[0]
                 picking.write(
                     {
-                        "notice": random.choice([True, False]),
+                        "l10n_ro_notice": random.choice([True, False]),
                         "scheduled_date": purchase.date_planned,
                         "date_done": purchase.date_planned,
                     }
@@ -479,7 +479,7 @@ class RomaniaTestData(models.Model):
                 picking = pickings[0]
                 picking.write(
                     {
-                        "notice": random.choice([True, False]),
+                        "l10n_ro_notice": random.choice([True, False]),
                         "create_date": sale.date_order,
                         "scheduled_date": sale.date_order,
                         "date_done": sale.date_order,
