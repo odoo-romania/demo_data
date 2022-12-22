@@ -6,9 +6,7 @@ import logging
 import random
 from datetime import date, timedelta
 
-from dateutil.relativedelta import relativedelta
-
-from odoo import api, models
+from odoo import _, api, models
 from odoo.exceptions import ValidationError
 
 _logger = logging.getLogger(__name__)
@@ -21,17 +19,12 @@ except (ImportError, IOError) as err:
 
 
 def days_last_month():
-    last_month = date.today() + relativedelta(
-        months=-1, day=1, hour=0, minute=0, second=0, microsecond=0
-    )
-    m = last_month.month
-    y = last_month.year
-    ndays = (date(y, m + 1, 1) - date(y, m, 1)).days
-    d1 = date(y, m, 1)
-    d2 = date(y, m, ndays)
-    delta = d2 - d1
+    current_first_date = date.today().replace(day=1)
+    last_first_month = (date.today().replace(day=1) - timedelta(1)).replace(day=1)
+    ndays = (current_first_date - last_first_month).days
     return [
-        (d1 + timedelta(days=i)).strftime("%Y-%m-%d") for i in range(delta.days + 1)
+        (last_first_month + timedelta(days=i)).strftime("%Y-%m-%d")
+        for i in range(ndays)
     ]
 
 
@@ -129,7 +122,7 @@ class RomaniaTestData(models.Model):
             "state_id": state,
             "country_id": country,
             "phone": fake_data.phone_number(),
-            "l10n_ro_l10n_ro_vat_subjected": l10n_ro_vat_subjected,
+            "l10n_ro_vat_subjected": l10n_ro_vat_subjected,
             "customer_rank": int(fake_data.boolean()),
             "supplier_rank": int(fake_data.boolean()),
         }
@@ -150,7 +143,10 @@ class RomaniaTestData(models.Model):
                     partner.write({"vat": vat_number})
                     vat_generated = True
                 except ValidationError:
-                    pass
+                    name = _(
+                        "Cannot write partner VAT number %(partnername)s - %(vat)s'"
+                    ) % {"partnername": partner.name, "vat": vat_number}
+                    _logger.info(name)
 
         return partner
 
@@ -171,7 +167,10 @@ class RomaniaTestData(models.Model):
                     partner.write({"vat": vat_number})
                     vat_generated = True
                 except ValidationError:
-                    pass
+                    name = _(
+                        "Cannot write partner VAT number %(partnername)s - %(vat)s'"
+                    ) % {"partnername": partner.name, "vat": vat_number}
+                    _logger.info(name)
 
     @api.model
     def create_test_record_partner_contact(self, partner, contact_type, country_code):
@@ -450,7 +449,7 @@ class RomaniaTestData(models.Model):
                 picking = pickings[0]
                 picking.write(
                     {
-                        "notice": random.choice([True, False]),
+                        "l10n_ro_notice": random.choice([True, False]),
                         "scheduled_date": purchase.date_planned,
                         "date_done": purchase.date_planned,
                     }
@@ -480,7 +479,7 @@ class RomaniaTestData(models.Model):
                 picking = pickings[0]
                 picking.write(
                     {
-                        "notice": random.choice([True, False]),
+                        "l10n_ro_notice": random.choice([True, False]),
                         "create_date": sale.date_order,
                         "scheduled_date": sale.date_order,
                         "date_done": sale.date_order,
@@ -525,8 +524,10 @@ class RomaniaTestData(models.Model):
         countries_exp = ["TR", "RU", "TH"]
         country_ro = "RO"
         acc_group = self.env.ref("account.group_account_user")
-        users = self.env["res.users"].search([])
-        for user in users:
+        all_users = self.env["res.users"].search([])
+        portal_users = all_users.filtered("share")
+        internal_users = all_users - portal_users
+        for user in internal_users:
             if acc_group and not user.has_group("account.group_account_user"):
                 user.write({"groups_id": [(4, acc_group.id)]})
         partners = self.env["res.partner"].search([])
