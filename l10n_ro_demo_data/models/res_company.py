@@ -14,7 +14,7 @@ class ResCompany(models.Model):
     def install_demo_data(self):
         self.ensure_one()
         self.update_company_config()
-        # self.env["nexterp.demodata"].install_demo_data(company=self)
+        self.env["nexterp.demodata"].install_demo_data(company=self)
 
     def update_company_config(self):
         self.ensure_one()
