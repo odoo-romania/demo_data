@@ -519,7 +519,9 @@ class RomaniaTestData(models.Model):
                     )
 
     @api.model
-    def install_demo_data(self, company):
+    def install_demo_data(self, company=False, count=50):
+        if not company:
+            company = self.env.company
         countries_eu = ["DE", "HU", "IT", "HR"]
         countries_exp = ["TR", "RU", "TH"]
         country_ro = "RO"
@@ -531,17 +533,17 @@ class RomaniaTestData(models.Model):
             if acc_group and not user.has_group("account.group_account_user"):
                 user.write({"groups_id": [(4, acc_group.id)]})
         partners = self.env["res.partner"].search([])
-        if len(partners) < 50:
-            self.create_partners(countries_eu, 100)
-            self.create_partners(countries_exp, 50)
-            self.create_partners(["RO"], 500)
+        if len(partners) < count:
+            self.create_partners(countries_eu, count*2)
+            self.create_partners(countries_exp, count)
+            self.create_partners(["RO"], count*2)
         # Create 25 categories
         categories = self.env["product.category"].search([])
-        if len(categories) < 25:
+        if len(categories) < int(count/2):
             language = "{}_{}".format(country_ro.lower(), country_ro.upper())
             fake_data = faker.Faker(language)
             fake_data.add_provider(faker_commerce.Provider)
-            for i in range(25):
+            for i in range(int(count/2)):
                 categ_type = random.choice(["product", "consumable", "service"])
                 name = fake_data.ecommerce_category()
                 exist_categ = self.env["product.category"].search([("name", "=", name)])
@@ -552,8 +554,8 @@ class RomaniaTestData(models.Model):
                     self.create_test_record_product_category(name, categ_type)
         # Create 200 products
         products = self.env["product.product"].search([])
-        if len(products) < 200:
-            for i in range(200):
+        if len(products) < count*4:
+            for i in range(count*4):
                 prod_type = random.choice(["product", "consumable"])
                 _logger.info("Create %s product product data." % i)
                 product = self.create_test_record_product(country_ro, prod_type)
@@ -605,11 +607,14 @@ class RomaniaTestData(models.Model):
                     product.write(
                         {"taxes_id": cust_tax_0, "supplier_taxes_id": supp_tax_0}
                     )
-                if i % 18 == 0:
-                    d394_code = random.choice(self.env["anaf.product.code"].search([]))
-                    product.write({"anaf_code_id": d394_code.id})
+                anaf_installed = self.env["ir.module.module"].search(
+                    [("name", "=", "l10n_ro_declaration"), ("state", "=", "installed")]
+                )
+                if anaf_installed and i % 18 == 0:
+                    d394_code = random.choice(self.env["l10n.ro.anaf.product.code"].search([]))
+                    product.write({"l10n_ro_anaf_code_id": d394_code.id})
             # Create Services products
-            for i in range(100):
+            for i in range(count*2):
                 _logger.info("Create %s service product data." % i)
                 product = self.create_test_record_product(country_ro, "service")
                 product.type = "service"
@@ -663,16 +668,16 @@ class RomaniaTestData(models.Model):
                     )
         # # Create 200 sale orders
         sales = self.env["sale.order"].search([], order="name asc")
-        if len(sales) < 250:
-            for i in range(250):
+        if len(sales) < count*5:
+            for i in range(count*5):
                 _logger.info("Create %s sale order data." % i)
                 self.create_test_record_sale_order()
         # Confirm 200 sale orders
         sales = self.env["sale.order"].search([("state", "=", "draft")])
-        for sale in sales[:200]:
+        for sale in sales[:count*4]:
             _logger.info("Confirm %s sale order." % sale.name)
             sale.action_confirm()
-        # self.products_add_supplier()
+        self.products_add_supplier()
         # Run Scheduler to order Products
         self.env["stock.warehouse.orderpoint"].flush()
         self.env["stock.warehouse.orderpoint"]._get_orderpoint_action()
